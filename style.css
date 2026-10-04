@@ -31,3 +31,13 @@ body[data-theme=fox]{--bg:#160d08;--card:#2a160c;--text:#fff7e8;--muted:#e7c7a5;
 
 .eggIntro{color:var(--muted);line-height:1.6;font-size:13px}.eggItem{position:relative;cursor:help}.eggItem small{display:block;margin-top:7px;color:var(--muted);line-height:1.45}.eggItem.done:hover{border:1px solid var(--accent);transform:translateY(-2px)}#eggGuideList{display:grid;gap:9px;margin-top:20px;text-align:left}.guideEgg{display:flex;flex-direction:column;gap:5px;padding:13px 15px;border:1px solid var(--line);border-radius:14px;background:var(--bg)}.guideEgg b{color:var(--accent)}.guideEgg span{font-size:12px;color:var(--muted)}.eggGuideBox{max-height:88svh;overflow:auto}.catGallery{grid-template-columns:repeat(3,1fr)}.catGallery img:nth-child(2n){transform:rotate(1.5deg)}.catGallery img:nth-child(2n+1){transform:rotate(-1deg)}.catGallery img{transition:.25s}.catGallery img:hover{transform:scale(1.03) rotate(0)}
 @media(max-width:650px){.catGallery{grid-template-columns:repeat(2,1fr)}.catGallery img{border-radius:18px}.topbar .secret-nav{flex:0 0 38px}}
+
+/* Expanded sticker wall */
+.stickerWall{grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 16px}
+.sticker{min-width:0;padding:5px 3px 18px}
+.sticker img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center;border-radius:48% 52% 46% 54%;border:7px solid #fff;outline:3px solid #111;background:#111}
+.sticker:nth-child(3n) img{border-radius:55% 45% 52% 48%}
+.sticker:nth-child(4n) img{object-position:45% 45%}
+.sticker:nth-child(5n) img{object-position:55% 50%}
+@media(max-width:850px){.stickerWall{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 12px}}
+@media(max-width:650px){.stickerWall{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 10px}.sticker{padding-bottom:16px}.sticker img{border-width:5px;outline-width:2px}.sticker b{max-width:96%;white-space:normal;line-height:1.2}}
