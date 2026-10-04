@@ -53,3 +53,6 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(-
 img{max-width:100%}.questResult:empty{display:none}
 .finaleBasement{box-sizing:border-box;margin-top:48px;padding:24px;border:1px solid var(--line);border-radius:22px;background:var(--card)}
 @media(max-width:420px){.topbar{gap:4px}.brand{max-width:76px;font-size:9px}.theme-switcher button{width:31px;height:31px;padding:5px}.secret-nav{width:34px;height:34px}.questNav{font-size:12px;padding:10px}.questHero{padding-left:14px;padding-right:14px}.questHero h1{font-size:clamp(42px,14vw,64px)}.chapter{padding:20px}.boss{font-size:100px}}
+
+/* Paw trail background */
+.pawTrail{position:fixed;z-index:0;pointer-events:none;opacity:.12;font-size:72px;line-height:1.7;filter:drop-shadow(0 4px 10px #0003);transform:rotate(-18deg);user-select:none}.pawTrailLeft{left:1vw;top:18vh}.pawTrailRight{right:1vw;bottom:4vh;transform:rotate(20deg)}body[data-theme=fox] .pawTrail{color:#ff8a24;opacity:.28;font-size:0}body[data-theme=fox] .pawTrail::before{content:"🦊  🐾  🦊  🐾  🦊";font-size:64px;display:block;writing-mode:vertical-rl;letter-spacing:18px} @media(max-width:650px){.pawTrail{font-size:46px;opacity:.09}.pawTrailLeft{left:-14px}.pawTrailRight{right:-14px}body[data-theme=fox] .pawTrail::before{font-size:42px}}
