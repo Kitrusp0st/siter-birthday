@@ -99,3 +99,33 @@ img{max-width:100%}.questResult:empty{display:none}
  .section{padding-left:10px!important;padding-right:10px!important}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+
+/* Compact phone layout: prevent fixed navbar / CTA flex stretching */
+@media(max-width:760px){
+ .topbar{
+  position:relative!important;top:auto!important;left:auto!important;transform:none!important;
+  width:calc(100% - 20px)!important;height:auto!important;min-height:0!important;
+  margin:10px auto 0!important;padding:10px!important;gap:7px!important;
+  display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;
+  justify-content:initial!important;align-items:center!important;
+ }
+ .topbar .brand{grid-column:1!important;grid-row:1!important;width:auto!important;min-width:0;max-width:none!important;margin:0!important;text-align:left!important;font-size:clamp(11px,3vw,15px)!important;line-height:1.25}
+ .topbar .theme-switcher{grid-column:2!important;grid-row:1!important;min-width:0!important;gap:1px!important;padding:2px!important;justify-self:end}
+ .topbar .theme-switcher button{min-width:30px!important;width:34px!important;height:36px!important;min-height:36px!important;padding:4px!important;font-size:18px}
+ .topbar>.secret-nav{grid-row:2!important;min-width:37px!important;width:auto!important;height:38px!important;min-height:38px!important;padding:7px!important}
+ .topbar>.secret-nav:nth-of-type(1){grid-column:1!important;justify-self:start}
+ .topbar .navlinks{grid-column:1/-1!important;grid-row:3!important;width:100%!important;order:unset!important;margin:0!important;padding:2px 0!important;gap:5px!important;justify-content:space-around!important}
+ .topbar .navlinks a{padding:6px 5px!important;font-size:12px!important}
+ .hero{min-height:0!important;padding:26px 15px 24px!important;justify-content:flex-start!important;gap:10px}
+ .hero .badge{margin:0!important}
+ .hero h1{margin:12px 0!important;font-size:clamp(32px,9vw,56px)!important}
+ .hero .lead{margin:8px auto 14px!important;line-height:1.5!important;font-size:clamp(14px,3.6vw,17px)!important}
+ .heroBtns{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;justify-content:center!important;gap:9px!important;width:100%!important;margin:10px auto!important}
+ .heroBtns>*{flex:1 1 145px!important;align-self:auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;width:auto!important;min-height:46px!important;height:auto!important;max-height:76px!important;margin:0!important;padding:12px 10px!important;line-height:1.25!important;font-size:clamp(12px,3.3vw,15px)!important}
+ .hero .stats{margin-top:14px!important}
+ .foxInvite{margin-top:14px!important}
+}
+@media(max-width:380px){
+ .topbar .theme-switcher button{width:30px!important;min-width:28px!important}
+ .heroBtns>*{flex-basis:100%!important}
+}
