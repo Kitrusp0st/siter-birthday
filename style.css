@@ -56,3 +56,46 @@ img{max-width:100%}.questResult:empty{display:none}
 
 /* Paw trail background */
 .pawTrail{position:fixed;z-index:0;pointer-events:none;opacity:.12;font-size:72px;line-height:1.7;filter:drop-shadow(0 4px 10px #0003);transform:rotate(-18deg);user-select:none}.pawTrailLeft{left:1vw;top:18vh}.pawTrailRight{right:1vw;bottom:4vh;transform:rotate(20deg)}body[data-theme=fox] .pawTrail{color:#ff8a24;opacity:.28;font-size:0}body[data-theme=fox] .pawTrail::before{content:"🦊  🐾  🦊  🐾  🦊";font-size:64px;display:block;writing-mode:vertical-rl;letter-spacing:18px} @media(max-width:650px){.pawTrail{font-size:46px;opacity:.09}.pawTrailLeft{left:-14px}.pawTrailRight{right:-14px}body[data-theme=fox] .pawTrail::before{font-size:42px}}
+
+/* Mobile polish 2026 */
+@media(max-width:760px){
+ html,body{max-width:100%;overflow-x:clip}
+ .topbar{display:flex;flex-wrap:wrap;gap:9px;padding:12px max(12px,env(safe-area-inset-right))!important;justify-content:center;align-items:center}
+ .topbar .brand{margin-right:auto;font-size:clamp(12px,3.5vw,17px)}
+ .topbar .navlinks{order:4;width:100%;display:flex;justify-content:center;flex-wrap:wrap;gap:6px}
+ .topbar .navlinks a{font-size:12px;padding:9px}
+ .topbar .theme-switcher{display:flex;gap:4px;flex-shrink:0}
+ .topbar .theme-switcher button{min-width:37px;min-height:39px;padding:7px!important}
+ .topbar .secret-nav{min-width:40px;min-height:40px;display:inline-flex;align-items:center;justify-content:center}
+ .topbar .secret-nav span{display:none}
+ .hero{padding:44px 16px 38px!important;min-height:auto!important}
+ .hero h1{font-size:clamp(38px,10vw,65px)!important;line-height:1.12;overflow-wrap:anywhere}
+ .hero .lead{font-size:clamp(15px,4vw,18px);line-height:1.65}
+ .heroBtns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+ .heroBtns>*{flex:1 1 190px;text-align:center}
+ .stats{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;width:100%}
+ .stats>div{min-width:0;padding:9px 5px!important}
+ .stats b{font-size:clamp(22px,7vw,35px)!important}
+ .stats small{font-size:clamp(9px,2.6vw,12px)!important;overflow-wrap:anywhere}
+ .section{padding:32px 14px!important;margin:0 auto}
+ .section h2{font-size:clamp(24px,7vw,36px)!important;line-height:1.18;overflow-wrap:anywhere}
+ .cards,.catGallery,.stickerWall{gap:12px!important}
+ .cards{grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr))!important}
+ .cat{display:grid!important;grid-template-columns:1fr!important}
+ .catPhoto,.catText{min-width:0;width:100%}
+ .catPhoto img{max-width:100%;height:auto}
+ .questGate .adventureBtn{width:100%;max-width:100%;white-space:normal;text-align:center}
+ .modal .giftbox,.secretCard{max-width:calc(100vw - 24px);max-height:88dvh;overflow-y:auto;overscroll-behavior:contain}
+ button,a{touch-action:manipulation}
+ #foxNavigator{margin:18px 10px}
+ #foxMapBtn{width:100%;max-width:100%}
+ .foxRouteGrid{grid-template-columns:1fr!important}
+}
+@media(max-width:410px){
+ .topbar .navlinks a{font-size:11px}
+ .topbar .theme-switcher button{min-width:34px;padding:6px!important}
+ .topbar .brand{width:100%;text-align:center}
+ .stats{gap:3px}
+ .section{padding-left:10px!important;padding-right:10px!important}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
